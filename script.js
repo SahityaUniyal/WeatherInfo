@@ -58,14 +58,14 @@ function getData() {
     humidity = weatherData.main.humidity;
     visibility = weatherData.visibility;
     imageID = weatherData.weather[0].icon;
-    imgSrc = "http://openweathermap.org/img/w/" + imageID + ".png";
+    imgSrc = "https://openweathermap.org/img/w/" + imageID + ".png";
   });
 }
 function weeksWeather() {
     let ele = document.querySelector(".weeks-weather");
     ele.innerHTML="";
   const url =
-    "http://api.openweathermap.org/data/2.5/onecall?lat=" +
+    "https://api.openweathermap.org/data/2.5/onecall?lat=" +
     lat +
     "&lon=" +
     lon +
@@ -97,7 +97,7 @@ function weeksWeather() {
         let img = document.createElement("img");
         img.className="week-image";
         img.src =
-          "http://openweathermap.org/img/w/" + value.weather[0].icon + ".png";
+          "https://openweathermap.org/img/w/" + value.weather[0].icon + ".png";
         data.appendChild(img);
         let h3 = document.createElement("h3");
         h3.className = "week-temp";
