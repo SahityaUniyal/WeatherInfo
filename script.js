@@ -9,13 +9,14 @@ let city = "",
   lat = "",
   lon = "";
 let weekday = [
-  "Monday",
+  "Sunday",
+   "Monday",
   "Tuesday",
   "Wednesday",
   "Thursday",
   "Friday",
-  "Saturday",
-  "Sunday",
+  "Saturday"
+  
 ];
 function display() {
   getData();
@@ -27,9 +28,9 @@ function display() {
   image.src = imgSrc;
   image.style.display = "inline";
   let day = document.querySelector(".day");
-  let today = new Date();
-  today = today.getDay();
-  day.innerHTML = "Day: " + weekday[today - 1];
+  let tod = new Date();
+  today = tod.getDay();
+  day.innerHTML = "Day: " + weekday[today];
   let cityTemp = document.querySelector(".city-temp");
   cityTemp.innerHTML = "Temp: " + temp + "&#xb0; Celsius";
   let cityHumidity = document.querySelector(".city-humidity");
